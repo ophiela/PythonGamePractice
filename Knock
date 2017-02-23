@@ -1,0 +1,10 @@
+from random import randint
+print ("Knock Knock")
+x = input("Who's there? ")
+num = randint(0,9)
+if num > 5:
+  print ( x + " " + "was the name of my dog's vocal coach")
+elif num < 5:
+  print (x + " "+ "I think I just saw one in that lady's hair")
+else
+  print ("You don't want to play? That's too bad.")
