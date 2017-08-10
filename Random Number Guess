@@ -1,0 +1,31 @@
+import random
+#Generate a random number
+
+a = random.randrange(20)
+
+#Ask for user input
+
+question = input("Python has a number between 1 and 10 /n Care to guess? ")
+
+
+if question == a:
+    print ("You  guessed right!")
+else:
+    q2 = input("Would you like to guess again? Yes or No? ")
+    if q2.lower() == "yes":
+        b = input("What's you're next guess? ")
+        if b == a:
+            print("Great job!")
+        else:
+            q3 = input("Just one more try! Enter your last guess, ")
+            if q3 == a:
+                print("Great job!")
+            else:
+                print("Python had {}. That's too bad! Thanks for playing.".format(a))
+        
+            
+    else:
+            print("Python had {()}.That's too bad! Thanks for playing.".format(a))
+    
+
+        
