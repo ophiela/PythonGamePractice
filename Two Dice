@@ -1,0 +1,15 @@
+import random
+
+#Creating my dice
+
+a = random.randrange(0,7)
+b = random.randrange(0,7)
+
+print(a + b)
+
+if (a + b) == 11:
+  print ("Wow, a nice roll on the first try!")
+elif (a + b) == 7:
+  print ("Wow, lucky seven!")
+else:
+  print("Not bad!")
