@@ -1,0 +1,9 @@
+#introduce user
+print("Welcome to Maddy Madlibs!")
+color = input("Please provide a color ")
+drink = input("Please provide a drink ")
+animal = input("Please provide an animal ")
+song = input(" Please provide a song ")
+holiday = input("Please provide a holiday ")
+print(("The {} {} sipped a {} while humming {} during a {} party.").format(color, animal, drink, song, holiday))
+
