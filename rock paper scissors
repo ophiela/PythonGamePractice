@@ -1,0 +1,36 @@
+import random
+
+#Players
+
+pyplayer = random.randrange(0,4)
+userplayer = input("Rock, Paper or Scissors? ")
+pyplay = None
+userplayer = userplayer.lower()
+
+#Value of py-play
+
+if pyplayer == 1:
+  pyplay= "rock"
+elif pyplayer == 2:
+  pyplay = "paper"
+else:
+  pyplay = "scissors"
+
+#Game
+
+if pyplay == userplayer:
+  print("Draw!")
+elif pyplay == "rock" and userplayer == "paper":
+  print("You win. Paper covers rock!")
+elif pyplay == "rock" and userplayer == "scissors":
+  print("Python wins. Rock smashes scissors!")
+elif pyplay == "paper" and userplayer == "scissors":
+  print("You win. Scissors cuts paper!")
+elif pyplay == "paper" and userplayer == "rock":
+  print("Python wins. Paper covers rock")
+elif pyplay == "scissors" and userplayer == "paper":
+  print("Python wins. Scissors cuts paper!")
+elif pyplay == "scissors" and userplayer == "rock":
+  print("You win. Rock smashes scissors!")
+else:
+  print("Error")
