@@ -1,0 +1,152 @@
+#Tic Tac Toe
+
+import array
+from array import array
+import random
+
+
+#GameBoard
+
+board = array('l',[1, 2, 3, 4, 5, 6, 7, 8, 9])
+win = [[1, 4, 7],[2, 5, 8],[3, 6, 9], [3, 5, 7], [1, 5, 9]]
+
+#Greet
+
+print("""Let's play a game of Tic Tac Toe! 
+Our board has a 3 rox by a 3 column. 
+Counting from 1 to 9, 
+right to left and top to bottom.""")
+print("""These are wins!
+{}""".format(win))
+
+#Move Frame
+
+pyPlay1 = random.randrange(1,4)
+pyPlay2 = random.randrange(4,7)
+pyPlay3 = random.randrange(7,10)
+user = [[]] * 3
+py = [[]] * 3
+
+#Player's first move
+
+print("Player goes first.")
+userPlay1 = input("Please enter a value within the range of 1 to 9. ")
+mov1= int(userPlay1) 
+user = user[0].append(mov1)
+board.remove(mov1)
+
+#Py chooses and choice is compared
+
+if pyPlay1 == mov1:
+  pyPlay1 = random.randrange(mov1)
+  board.remove(pyPlay1)
+else:
+  board.remove(pyPlay1)
+  py = py[0].append(pyPlay1)
+
+print("These numbers {} are still on the board!".format(board))
+
+#Player's second turn
+
+userPlay2 = input("Please enter another value. ")
+mov2 = int(userPlay2)
+if mov2 == mov1:
+  print("Sorry, you've already selected that.")
+  new2 = input("Please select another number. ")
+  user = user[1].append(new2)
+  board.remove(new2)
+else:
+  user = user[1].append(mov2)
+  board.remove(mov2)
+  if pyPlay2 == mov2:
+    
+#Py chooses and choice is compared
+
+if pyPlay2 == mov2:
+  pyPlay1 = random.randrange(mov2,)
+  board.remove(pyPlay2)
+else:
+  board.remove(pyPlay2)
+  py = py[0].append(pyPlay2)
+
+print("These numbers {} are still on the board!".format(board))
+
+#Player's third turn
+
+userPlay3 = input("Please enter another value. ")
+mov3 = int(userPlay3)
+if mov3 == mov1 or mov3 == mov2:
+  print("Sorry, you've already selected that value. ")
+  new3 = input("Please select another.")
+  user = user[2].append(new3)
+  board.remove(new3)
+else:
+  user = user[2].append(mov3)
+  board.remove(mov3)
+
+print("These are your selected choices {}.".format(user))
+
+#Check Selection
+
+final = mov1 + mov2 + mov3
+
+if final == 15:
+  print("You win!")
+elif final == 12:
+  if 4 in user:
+    if 7 in user:
+      print("You win!")
+    else:
+      print("Sorry, no three in a row.")
+  else:
+    print("Sorry, no three in a row.")
+elif final == 18:
+  if 9 in user:
+    if 6 in user:
+      print("You win!")
+    else:
+      print("Sorry, no three in a row.")
+  else:
+    print("Sorry, no three in a row.")
+else:
+  print("Sorry, no three in a row.")
+
+#Py's last move
+
+if 9 in py or 5 in py:
+  if 7 or 1 in py:
+    if pyPlay3 == mov3 or pyPlay3 == mov2:
+      pyPlay3 = random.randrange(mov3,)
+      board.remove(pyPlay3)
+    else:
+      board.remove(pyPlay3)
+      py = py[2].append(pyPlay3)
+else:
+  print("It\'s a draw.")
+  else:
+    print("It\'s a draw.")
+
+pyFinal = py[0] + py[1] + py[2]
+
+if pyFinal == 15:
+  print("Py wins!")
+elif pyFinal == 12:
+  if 4 in user:
+    if 7 in user:
+      print("Py wins!")
+    else:
+      print("It\'s a draw.")
+  else:
+    print("It\'s a draw.")
+elif pyFinal == 18:
+  if 9 in user:
+    if 6 in user:
+      print("Py wins!")
+    else:
+      print("It\'s a draw.")
+  else:
+    print("It\'s a draw.")
+else:
+  print("It\'s a draw.")
+  
+print("Thanks for playing Tic Tac Toe!")
