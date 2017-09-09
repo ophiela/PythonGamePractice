@@ -9,13 +9,17 @@ pygame.display.set_caption('Hello World!')
 black = (0, 0, 0)
 white = (255, 255, 255)
 red = (255, 0, 0)
-sky_blue = (0, 200, 200)
+sky_blue = (0, 180, 230)
 yellow = (255, 255, 0)
+green = (0, 255, 0)
 
 #Scenery
 DISPLAYSURF.fill(sky_blue)
-pygame.draw.circle(DISPLAYSURF, yellow, (400, 50), 30, 0)
+sun = pygame.draw.circle(DISPLAYSURF, yellow, (400, 50), 30, 0)
+landscape = pygame.draw.rect(DISPLAYSURF, green, (0, 350, 500, 400))
 
+
+#continuous running loop
 while True:
     for event in pygame.event.get():
         if event.type == QUIT:
