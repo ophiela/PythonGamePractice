@@ -38,6 +38,10 @@ dogImg5 = pygame.image.load('C:/Users/Mygan/AppData/Local/Programs/Python/Python
 dogImg5 = pygame.transform.scale(dogImg5, (60, 80)) 
 dogImg6 = pygame.image.load('C:/Users/Mygan/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/catndog/png/dog/Run (6).png')
 dogImg6 = pygame.transform.scale(dogImg6, (60, 80))
+dogImg7 = pygame.image.load('C:/Users/Mygan/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/catndog/png/dog/Run (7).png')
+dogImg7 = pygame.transform.scale(dogImg7, (60, 80))
+dogImg8 = pygame.image.load('C:/Users/Mygan/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/catndog/png/dog/Run (8).png')
+dogImg8 = pygame.transform.scale(dogImg8, (60, 80))
 
 while True:
     scenery()
@@ -75,8 +79,19 @@ while True:
         scenery()
         DISPLAYSURF.blit(dogImg6, (a + i, 280))
         pygame.display.flip()
+        pygame.display.update()
+        a = a + 1
+        scenery()
+        DISPLAYSURF.blit(dogImg7, (a + i, 280))
+        pygame.display.flip()
+        pygame.display.update()
+        a = a + 1
+        scenery()
+        DISPLAYSURF.blit(dogImg6, (a + i, 280))
+        pygame.display.flip()
+        pygame.display.update()
         fpsClock.tick(FPS)
-        a = a+3
+        a = a+1
 
 
     pygame.display.update()
