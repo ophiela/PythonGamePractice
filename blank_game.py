@@ -8,7 +8,7 @@ pygame.init()
 
 DISPLAYSURF = pygame.display.set_mode((500,400))
 pygame.display.set_caption('Doggie!')
-FPS= 60
+FPS= 120
 fpsClock = pygame.time.Clock()
 
 #colors
@@ -50,48 +50,39 @@ while True:
             if event.type == QUIT:
                 pygame.quit()
                 sys.exit()
-        a = 0
-        DISPLAYSURF.blit(dogImg1, (a+i,280))
-        pygame.display.flip()
-        pygame.display.update()
-        a = a+1
-        scenery()
-        DISPLAYSURF.blit(dogImg2, (a + i, 280))
-        pygame.display.flip()
-        pygame.display.update()
-        a = a+1
-        scenery()
-        DISPLAYSURF.blit(dogImg3, (a + i, 280))
-        scenery()
-        pygame.display.flip()
-        pygame.display.update()
-        a = a+1
-        scenery()
-        DISPLAYSURF.blit(dogImg4, (a + i, 280))
-        pygame.display.flip()
-        pygame.display.update()
-        a = a+1
-        scenery()
-        DISPLAYSURF.blit(dogImg5, (a + i, 280))
-        pygame.display.flip()
-        pygame.display.update()
-        a = a+1
-        scenery()
-        DISPLAYSURF.blit(dogImg6, (a + i, 280))
-        pygame.display.flip()
+        a = i
+        DISPLAYSURF.blit(dogImg1, (a ,280))
         pygame.display.update()
         a = a + 1
         scenery()
-        DISPLAYSURF.blit(dogImg7, (a + i, 280))
-        pygame.display.flip()
+        DISPLAYSURF.blit(dogImg2, (a, 280))
         pygame.display.update()
         a = a + 1
         scenery()
-        DISPLAYSURF.blit(dogImg6, (a + i, 280))
-        pygame.display.flip()
+        DISPLAYSURF.blit(dogImg3, (a , 280))
+        pygame.display.update()
+        a = a + 1
+        scenery()
+        DISPLAYSURF.blit(dogImg4, (a , 280))
+        pygame.display.update()
+        a = a + 1
+        scenery()
+        DISPLAYSURF.blit(dogImg5, (a , 280))
+        pygame.display.update()
+        a = a + 1
+        scenery()
+        DISPLAYSURF.blit(dogImg6, (a , 280))
+        pygame.display.update()
+        a = a + 1
+        scenery()
+        DISPLAYSURF.blit(dogImg7, (a , 280))
+        pygame.display.update()
+        a = a + 1
+        scenery()
+        DISPLAYSURF.blit(dogImg8, (a , 280))
         pygame.display.update()
         fpsClock.tick(FPS)
-        a = a+1
+        a = a + 1
 
 
     pygame.display.update()
